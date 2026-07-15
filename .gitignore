@@ -1,0 +1,38 @@
+# Gradle files
+.gradle/
+build/
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Local configuration file
+local.properties
+
+# Proguard folder
+proguard/
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IntelliJ
+out/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be tracked by version control.
+.vscode/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# AndroidStudio project files
+.gradle
+.idea
+*.iml
+*.class
+*.jar
+*.log

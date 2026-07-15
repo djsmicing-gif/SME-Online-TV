@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="root">
+
+    <PreferenceCategory
+        android:title="Playback Settings"
+        android:key="playback_settings">
+
+        <SwitchPreferenceCompat
+            android:title="Autoplay"
+            android:key="pref_autoplay"
+            android:summary="Automatically play next video"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:title="Video Quality"
+            android:key="pref_video_quality"
+            android:entries="@array/quality_labels"
+            android:entryValues="@array/quality_values"
+            android:defaultValue="auto"
+            android:summary="Select default video quality" />
+
+        <SwitchPreferenceCompat
+            android:title="Hardware Acceleration"
+            android:key="pref_hardware_acceleration"
+            android:summary="Use hardware acceleration for video playback"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Appearance"
+        android:key="appearance_settings">
+
+        <SwitchPreferenceCompat
+            android:title="Dark Mode"
+            android:key="pref_dark_mode"
+            android:summary="Use dark theme"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:title="Theme Color"
+            android:key="pref_theme_color"
+            android:entries="@array/theme_colors"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="blue"
+            android:summary="Select app theme color" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Storage & Cache"
+        android:key="storage_settings">
+
+        <Preference
+            android:title="Clear Cache"
+            android:key="pref_clear_cache"
+            android:summary="Free up storage space" />
+
+        <Preference
+            android:title="Clear Watch History"
+            android:key="pref_clear_history"
+            android:summary="Remove all watched videos"/>
+
+        <Preference
+            android:title="Clear Favorites"
+            android:key="pref_clear_favorites"
+            android:summary="Remove all favorite items" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About"
+        android:key="about_settings">
+
+        <Preference
+            android:title="App Version"
+            android:key="pref_app_version"
+            android:summary="1.0.0"
+            android:selectable="false" />
+
+        <Preference
+            android:title="Privacy Policy"
+            android:key="pref_privacy_policy" />
+
+        <Preference
+            android:title="Terms of Service"
+            android:key="pref_terms_of_service" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

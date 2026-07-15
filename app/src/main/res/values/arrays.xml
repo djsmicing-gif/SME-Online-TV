@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bottom_nav_labels">
+        <item>Home</item>
+        <item>Live TV</item>
+        <item>Videos</item>
+        <item>News</item>
+        <item>Profile</item>
+    </array>
+</resources>

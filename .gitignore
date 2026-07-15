@@ -1,0 +1,59 @@
+# Gradle files
+.gradle/
+build/
+*.jks
+*.keystore
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+*.DS_Store
+
+# Android Studio
+android-studio-dir/
+*.iml
+.idea/
+out/
+.idea/
+*.ipr
+*.iws
+
+# Build artifacts
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+.DS_Store
+
+# Gradle-based build system
+.gradle/
+local.properties
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+*~
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be tracked by git. However, this file is often
+# kept out of version control.
+# .vscode/
+
+# ktlint (only when using --reporter=plain with --add-import)
+ktlint-report.txt

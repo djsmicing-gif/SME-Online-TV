@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Playback"
+        android:key="playback_category">
+        <SwitchPreference android:title="Autoplay"
+            android:key="autoplay"
+            android:defaultValue="true"
+            android:summary="Automatically play next video" />
+        <ListPreference android:title="Video Quality"
+            android:key="video_quality"
+            android:defaultValue="auto"
+            android:entries="@array/quality_labels"
+            android:entryValues="@array/quality_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Appearance"
+        android:key="appearance_category">
+        <SwitchPreference android:title="Dark Mode"
+            android:key="dark_mode"
+            android:defaultValue="true"
+            android:summary="Use dark theme" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Cache & Storage"
+        android:key="storage_category">
+        <Preference android:title="Clear Cache"
+            android:key="clear_cache"
+            android:summary="Clear application cache" />
+        <Preference android:title="Clear History"
+            android:key="clear_history"
+            android:summary="Clear watch history" />
+    </PreferenceCategory>
+</PreferenceScreen>

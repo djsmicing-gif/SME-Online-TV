@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Mode Colors -->
+    <color name="dark_bg_primary">#0A0A0A</color>
+    <color name="dark_bg_secondary">#121212</color>
+    <color name="dark_bg_tertiary">#1E1E1E</color>
+    
+    <!-- Light Mode Colors -->
+    <color name="light_bg_primary">#FFFFFF</color>
+    <color name="light_bg_secondary">#F5F5F5</color>
+    <color name="light_bg_tertiary">#EEEEEE</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_blue">#1E88E5</color>
+    <color name="accent_blue_dark">#0D47A1</color>
+    <color name="accent_blue_light">#42A5F5</color>
+    <color name="accent_red">#F44336</color>
+    <color name="accent_green">#4CAF50</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B3B3B3</color>
+    <color name="text_tertiary_dark">#757575</color>
+    
+    <color name="text_primary_light">#000000</color>
+    <color name="text_secondary_light">#666666</color>
+    <color name="text_tertiary_light">#999999</color>
+    
+    <!-- Overlay Colors -->
+    <color name="overlay_light">#4DFFFFFF</color>
+    <color name="overlay_dark">#4D000000</color>
+    
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+</resources>

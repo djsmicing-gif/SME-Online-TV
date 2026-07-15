@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Title -->
+    <string name="app_name">SME Online TV</string>
+    <string name="app_tagline">Streaming Excellence</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_live_tv">Live TV</string>
+    <string name="nav_videos">Videos</string>
+    <string name="nav_news">News</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Home Screen -->
+    <string name="label_featured">Featured</string>
+    <string name="label_popular">Popular</string>
+    <string name="label_recommended">Recommended</string>
+    <string name="label_live_channels">Live Channels</string>
+    <string name="label_popular_videos">Popular Videos</string>
+    <string name="label_latest_news">Latest News</string>
+    <string name="label_view_all">View All</string>
+    
+    <!-- Search Screen -->
+    <string name="search_hint">Search channels, videos, news...</string>
+    <string name="search_no_results">No results found</string>
+    <string name="search_empty">Search for channels, videos, and news</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_title">My Profile</string>
+    <string name="profile_verified">Verified</string>
+    <string name="profile_settings">Settings</string>
+    <string name="profile_dark_mode">Dark Mode</string>
+    <string name="profile_about">About</string>
+    <string name="profile_help">Help & Support</string>
+    <string name="profile_logout">Logout</string>
+    
+    <!-- Status Messages -->
+    <string name="loading">Loading...</string>
+    <string name="loading_content">Loading content...</string>
+    <string name="error">Something went wrong</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_server">Server error. Please try again later.</string>
+    <string name="retry">Retry</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Video Player -->
+    <string name="player_play">Play</string>
+    <string name="player_pause">Pause</string>
+    <string name="player_fullscreen">Fullscreen</string>
+    <string name="player_exit_fullscreen">Exit Fullscreen</string>
+    
+    <!-- News -->
+    <string name="news_breaking">Breaking News</string>
+    <string name="news_published">Published</string>
+    <string name="news_read_more">Read More</string>
+    
+    <!-- General -->
+    <string name="views">views</string>
+    <string name="views_count">%d views</string>
+    <string name="duration_minutes">%d min</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="copyright">Copyright © 2024 SME Online TV. All rights reserved.</string>
+    <string name="live_badge">LIVE</string>
+</resources>

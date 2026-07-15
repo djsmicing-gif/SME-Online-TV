@@ -1,74 +1,74 @@
 package com.smeonlinetv.app.ui.screens
 
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
-import com.smeonlinetv.app.R
-import com.smeonlinetv.app.navigation.Screen
-import kotlinx.coroutines.delay
+import com.smeonlinetv.app.ui.theme.DarkBackground
+import com.smeonlinetv.app.ui.theme.DarkBlue
+import com.smeonlinetv.app.ui.theme.TextLight
 
 @Composable
-fun SplashScreen(navController: NavHostController) {
-    var isVisible by remember { mutableFloatStateOf(0f) }
-    
-    val scale by animateFloatAsState(
-        targetValue = isVisible,
-        animationSpec = tween(1000)
-    )
-
-    LaunchedEffect(Unit) {
-        isVisible = 1f
-        delay(2500)
-        navController.navigate(Screen.Home.route) {
-            popUpTo(Screen.Splash.route) { inclusive = true }
-        }
-    }
-
+fun SplashScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.primary),
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        DarkBackground,
+                        DarkBlue.copy(alpha = 0.1f),
+                        DarkBackground
+                    )
+                )
+            ),
         contentAlignment = Alignment.Center
     ) {
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = androidx.compose.foundation.layout.Arrangement.Center
         ) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
-                contentDescription = "App Logo",
+            Box(
                 modifier = Modifier
                     .size(120.dp)
-                    .scale(scale),
-                tint = Color.White
-            )
+                    .background(
+                        color = DarkBlue,
+                        shape = androidx.compose.foundation.shape.RoundedCornerShape(20.dp)
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "TV",
+                    fontSize = 48.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = TextLight
+                )
+            }
+            
             Text(
                 text = "SME Online TV",
-                fontSize = 32.sp,
+                fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.White,
-                modifier = Modifier.scale(scale)
+                color = TextLight,
+                modifier = Modifier.androidx.compose.material3.padding(top = 24.dp)
+            )
+            
+            Text(
+                text = "Streaming Excellence",
+                fontSize = 14.sp,
+                color = com.smeonlinetv.app.ui.theme.TextMedium,
+                modifier = Modifier.androidx.compose.material3.padding(top = 8.dp)
             )
         }
     }

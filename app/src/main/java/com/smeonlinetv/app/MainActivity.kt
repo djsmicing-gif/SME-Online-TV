@@ -3,20 +3,33 @@ package com.smeonlinetv.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.isSystemInDarkTheme
-import com.smeonlinetv.app.navigation.SMENavigation
+import androidx.compose.foundation.background
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import com.smeonlinetv.app.ui.theme.SMEOnlineTVTheme
-import dagger.hilt.android.AndroidEntryPoint
+import com.smeonlinetv.app.ui.screens.SplashScreen
+import com.smeonlinetv.app.ui.screens.MainScreen
+import kotlinx.coroutines.delay
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SMEOnlineTVTheme(
-                darkTheme = isSystemInDarkTheme()
-            ) {
-                SMENavigation()
+            SMEOnlineTVTheme {
+                val showSplash = remember { mutableStateOf(true) }
+                
+                LaunchedEffect(Unit) {
+                    delay(2000)
+                    showSplash.value = false
+                }
+                
+                if (showSplash.value) {
+                    SplashScreen()
+                } else {
+                    MainScreen()
+                }
             }
         }
     }
